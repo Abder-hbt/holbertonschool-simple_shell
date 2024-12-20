@@ -4,7 +4,7 @@
 </p>
 
 # Sommaire
-- [Description](#description)
+- [Description](#1.-Description)
 - [Structure des fichiers](#structure-des-fichiers)
 - [Appels système et bibliothèques](#appels-système-et-bibliothèques)
 - [Installation](#installation)
