@@ -2,7 +2,7 @@
 # Project SHELL
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Abder-hbt/holbertonschool-simple_shell/refs/heads/main/LOGO_SHELL_SF.png" alt="Logo SHELL" style="width: 300px;">
+    <img src="https://raw.githubusercontent.com/Abder-hbt/holbertonschool-simple_shell/refs/heads/main/LOGO_SHELL_SF.png" alt="Logo SHELL" style="width: 450px;">
 </p>
 
 
