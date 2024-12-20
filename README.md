@@ -2,7 +2,7 @@
 # Project Printf
 
 <p align="center">
-    <img src="https://github.com/Abder-hbt/holbertonschool-simple_shell/blob/main/logo_SHELL_AF.jpg?raw=true" alt="Logo SHELL" style="width: 300px;">
+    <img src="https://raw.githubusercontent.com/Abder-hbt/holbertonschool-simple_shell/refs/heads/main/logo_SHELL.png?raw=true" alt="Logo SHELL" style="width: 450px;">
 </p>
 
 
