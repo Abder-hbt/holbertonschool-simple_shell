@@ -3,6 +3,8 @@
     <img src="https://raw.githubusercontent.com/Abder-hbt/holbertonschool-simple_shell/refs/heads/main/LOGO_SHELL_SF.png" alt="Logo SHELL" style="width: 500px;">
 </p>
 
+---
+
 # Sommaire
 - [Description](#1.-Description)
 - [Structure des fichiers](#structure-des-fichiers)
