@@ -7,8 +7,6 @@
 - [Appels système et bibliothèques](#appels-système-et-bibliothèques)
 - [Structure des fichiers](#structure-des-fichiers)
 - [Installation](#installation)
-- [Example d'uilisation](#example-d'utilisation)
-- [Contributions](#contributions)
 - [Auteurs](#auteurs)
 
 # Project SHELL
@@ -55,3 +53,56 @@ This table lists all the System calls `2` and Library calls `3` used in this pro
 | `setenv` | <pre>[man 3 setenv](https://man7.org/linux/man-pages/man3/setenv.3.html)</pre> | setenv() function adds a variable to the environment. |
 | `unsetenv` | <pre>[man 3 unsetenv](https://man7.org/linux/man-pages/man3/setenv.3.html)</pre> | unsetenv() function deletes a variable from the environment. |
 | `write` | <pre>[man 2 write](https://man7.org/linux/man-pages/man2/write.2.html)</pre> | write() function writes to a file descriptor. |
+
+---
+
+## 3. File structure
+This table contains a brief description of the working files of the project, click on the names to get the source code.
+
+| File | Content | Description |
+| --- | --- | --- |
+| <pre>[main.h](main.h)</pre> | <pre>header of the project</pre> | <pre>Contain the structure, prototypes, macros and<br>external variable of the project.</pre> |
+| <pre>[main_loop.c](main_loop.c)</pre> | <pre>int main();</pre> | <pre>Main loop, recieve input from the Command Line Interface<br>parse and execute it.</pre> |
+| <pre>[tokenizers.c](tokenizers.c)</pre> | <pre>char **hsh_tokenizer();<br>char **tokenizer_path();</pre> | <pre>Split the input string into a array of tokens.<br>Split the environment variable PATH into an array of tokens.</pre> |
+| <pre>[validators.c](validators.c)</pre> | <pre>char *validate_input();<br>int validate_spaces();</pre> | <pre>Validate if PATH exists<br>Validate spaces, tabs and line breaks.</pre> |
+| <pre>[executors.c](executors.c)</pre> | <pre>int hsh_execute();<br>int hsh_execute_builtins();</pre> | <pre>Fork process and replace the child with a new program.<br>Choose from an array of builtin functions.</pre> |
+| <pre>[builtin_functions.c](builtin_functions.c)</pre> | <pre>int hsh_cd();<br>int hsh_setenv();<br>int hsh_unsetenv();<br>int hsh_env();<br>int hsh_exit();</pre> | <pre>Change directory.<br>Change or add and environment variable.<br>Delete an environment variable from the environment.<br>Print the environment variables list.<br>Terminate the main loop and exit the shell.</pre> |
+| <pre>[helper_functions.c](helper_functions.c)</pre> | <pre>void sigintH();<br>char *str_concat();<br>void *_realloc();</pre> | <pre>Handles SIGINT (CTRL + C).<br>Concatenate two strings.<br>Reallocate a memory block.</pre> |
+
+---
+
+## 4. Installation
+First, clone this repository to your local machine:
+
+```
+$ git clone https://github.com/dks78/holbertonschool-simple_shell
+```
+
+Then, go to the repository folder:
+
+```
+$ cd holbertonschool-simple_shell
+```
+
+Compile it with the following command:
+
+```
+$ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+```
+
+Now you can run the shell in interactive mode:
+
+```
+$ ./hsh
+```
+
+Or you can run it in non-interactive mode:
+
+```
+$ echo "ls -la" | ./hsh
+```
+
+## 5. Authors
+
+Aurélien Mestry /
+Abderrhamane Ghomed
